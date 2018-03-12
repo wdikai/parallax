@@ -1,0 +1,134 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.parallax {
+    perspective: 1px;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #33302D;
+}
+
+.parallax__group {
+    position: relative;
+    height: 100%;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.parallax__layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.parallax__layer--base {
+    transform: translateZ(0);
+}
+
+.parallax__layer--back {
+    transform: translateZ(-1px) scale(2);
+}
+
+.parallax__layer--deep {
+    transform: translateZ(-2px) scale(3);
+}
+
+.parallax__layer--max-deep {
+    height: 50%;
+    transform: translateZ(-3px) scale(3);
+}
+
+.city {
+    background-color: transparent;
+    background-repeat: repeat no-repeat;
+    background-size: 1000px;
+}
+
+.moon {
+    margin-top: -100px;
+    background-repeat: no-repeat;
+    background-image: url(/assets/images/city/moon.png);
+    background-size: 350px;
+    background-position-x: 100%;
+}
+
+.city--base {
+    background-image: url(/assets/images/city/city.png);
+    background-position-y: 50vh;
+}
+
+.city--back {
+    background-image: url(/assets/images/city/city2.png);
+    background-position-y: 35vh;
+}
+
+.city--deep {
+    background-image: url(/assets/images/city/city3.png);
+    background-position-y: 40vh;
+}
+
+.container {
+    position: absolute;
+    top: 100vh;
+    min-height: 90vh;
+    padding: 100px 0 50px 0;
+    background: black;
+    color: wheat;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.header {
+    color: #f7f7f7;
+    padding-top: 15vh;
+    text-align: center;
+}
+
+.header>h1 {
+    margin: 0;
+    font-size: 15vh;
+}
+
+.section {
+    padding: 20px;
+    width: 30%;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .moon {
+        opacity: 0;
+    }
+    .city--base {
+        background-position-y: 40vh;
+    }
+    .city--back {
+        background-position-y: 25vh;
+    }
+    .city--deep {
+        background-position-y: 30vh;
+    }
+
+    .section {
+        padding: 15px;
+        width: auto;
+    }
+}
+
+@media screen and (min-width: 1960px) {
+    .city {
+        background-size: 100%;
+    }
+    .moon {
+        background-size: 1000px;
+    }
+}

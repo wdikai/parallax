@@ -1,0 +1,20 @@
+{
+  "name": "parallax",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "lite-server --config=config.json",
+    "deploy": "serverless client deploy --stage dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "lite-server": "^2.3.0",
+    "serverless": "^1.26.1",
+    "serverless-finch": "^1.4.0"
+  }
+}
